@@ -1,0 +1,48 @@
+package palettedos;
+import java.util.*;
+public class Palettedos {
+    private static Scanner scanner = new Scanner (System.in);
+
+    public static void main(String[] args) {
+        
+        System.out.print("What's your surname name?\n");   
+        String sname = scanner.nextLine();               
+        
+        System.out.print("What's your last name?\n");   
+        String lname = scanner.nextLine();               
+       
+        System.out.print("What's grade did you score in your KCSE?\n");   
+        String kcse = scanner.nextLine();               
+        
+        System.out.print("What did you study for your undergraduate degree?\n");   
+        String degree = scanner.nextLine();               
+        
+        System.out.print("What's your weight?\n");
+        int w = scanner.nextInt();
+        
+        System.out.print("What's your date of birth?\n");
+        int dob = scanner.nextInt();
+        
+        System.out.print("What was your mean grade in your mock exams?\n");
+        float mock= scanner.nextFloat();
+        
+        int age = 2016-dob;
+        
+        System.out.println( "Surname:" + sname );
+        System.out.println( "Last name:" + lname );
+        System.out.println( "KCSE Qualification:" + kcse );
+        System.out.println( "Undergraduate degree:" + degree );
+        System.out.println( "Weight:" + w );
+        System.out.println( "Age:" + age );
+        System.out.println( "Mean grade in Mock Exams:" + mock);
+        
+        if (age >=25 && w>=60)
+            System.out.println( "You have qualified for the job!");
+        else
+            System.out.println( "Your application for the post was unsuccessful, feel free to apply for future advertised roles.");
+        
+    
+        
+    }
+    
+}
