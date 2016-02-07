@@ -39,10 +39,12 @@ public class Palettedos {
         if (age >=25 && w>=60)
             System.out.println( "You have qualified for the job!");
         else
-            System.out.println( "Your application for the post was unsuccessful, feel free to apply for future advertised roles.");
-        
-    
-        
+            if (age <25)
+            System.out.println( "Your application for the post was unsuccessful; your are less than 25 years old, feel free to apply for future advertised roles.");
+        else 
+                if (w<60)
+            System.out.println( "Your application for the post was unsuccessful; your weigh less than 60kg, feel free to apply for future advertised roles.");
+               
     }
     
 }
