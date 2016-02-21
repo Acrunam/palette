@@ -1,0 +1,35 @@
+package palettedos;
+import java.util.*;
+class Palettedos{
+    private static Scanner Z = new Scanner(System.in);
+    public static final double pi = 3.142;
+    public static void main(String[]args){    
+        Palettedos A = new Palettedos();
+        System.out.println("Enter the base and height of the triangle respectively");
+        int base = Z.nextInt();
+        int height = Z.nextInt();
+        System.out.println("Enter the radius of the circle");
+        int radius = Z.nextInt();
+        System.out.println("Enter the length of the square");
+        long length = Z.nextInt();
+        double tArea= A.calculateArea(base,height);
+        double cArea= A.calculateArea(radius);
+        long sqArea= A.calculateArea(length);
+        System.out.println("The area of the triangle is\t"+tArea);
+        System.out.println("The area of the circle is\t"+cArea);
+        System.out.println("The area of the square is\t"+sqArea);
+    }
+    double calculateArea(int base, int height){
+        double triArea=0.5*base*height;
+        return triArea;   
+    }
+    double calculateArea(int radius){
+        double circArea=pi*radius*radius;
+        return circArea;   
+    }
+    long calculateArea(long length){    /*USED LONG DATA TYPE TO NEGATE AMBIGUOUS INVOCATION OF THE METHOD calculateArea*/
+        long squaArea=length*length;
+        return squaArea;
+        
+    }
+}
